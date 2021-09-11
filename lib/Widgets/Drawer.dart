@@ -1,5 +1,6 @@
 import 'package:baigundhura_computer/Constants/Colors.dart';
 import 'package:baigundhura_computer/Widgets/DrawerItem.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
@@ -29,9 +30,9 @@ class CustomDrawer extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: CircleAvatar(
                           backgroundColor: CustomColors().mainColors.white,
-                          radius: 60.0,
-                          foregroundImage: NetworkImage(
-                            'https://unsplash.it/110/110',
+                          radius: 65.0,
+                          backgroundImage: CachedNetworkImageProvider(
+                            'https://nirdeshpokhrel.com.np/img/Border.jpg',
                           ),
                         ),
                       ),
@@ -115,12 +116,16 @@ class CustomDrawer extends StatelessWidget {
               DrawerItem(
                 icon: Icons.dashboard,
                 text: 'dashboard'.tr,
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed('/');
+                },
               ),
               DrawerItem(
                 icon: Icons.people_alt_sharp,
                 text: 'all_students'.tr,
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed('/addStudent');
+                },
               ),
               DrawerItem(
                 icon: Icons.person_pin_outlined,

@@ -23,12 +23,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cached_network_image: ^3.0.0
   cloud_firestore: ^1.0.7
   cupertino_icons: ^1.0.2
   firebase_core: ^1.1.0
   get: ^4.1.4
   google_fonts: ^2.0.0
   http: ^0.13.2
+  nepali_date_picker: ^5.0.0
 
 dev_dependencies:
   flutter_test:

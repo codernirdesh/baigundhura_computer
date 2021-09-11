@@ -1,5 +1,6 @@
 import 'package:baigundhura_computer/Constants/Colors.dart';
 import 'package:baigundhura_computer/Screens/HomePage/HomePage.dart';
+import 'package:baigundhura_computer/Screens/Student/AddStudent.dart';
 import 'package:baigundhura_computer/utils/Locale.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -19,15 +20,20 @@ class VotingApp extends StatelessWidget {
       translations: TranslationsCustom(),
       title: 'app_name'.tr,
       debugShowCheckedModeBanner: true,
-      locale: CustomLocale().englishLocale,
+      locale: CustomLocale().nepaliLocale,
       fallbackLocale: CustomLocale().englishLocale,
       home: HomePage(),
       color: CustomColors().mainColors.red,
       theme: ThemeData(
         primaryColor: CustomColors().mainColors.red,
         primaryIconTheme: IconThemeData(color: CustomColors().mainColors.white),
-        splashColor: CustomColors().mainColors.red,
+        splashColor: CustomColors().mainColors.red.withOpacity(0.05),
+        primarySwatch: Colors.red,
       ),
+      getPages: [
+        GetPage(name: '/', page: () => HomePage()),
+        GetPage(name: '/addStudent', page: () => AddStudent()),
+      ],
     );
   }
 }

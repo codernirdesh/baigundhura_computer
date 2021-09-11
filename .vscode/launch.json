@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "mero_karobaar_clone (Flutter)",
+            "program": "lib/main.dart",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
